@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Campus Question</title>
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 120px);
+      gap: 15px;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background: #4f46e5;
+      color: white;
+    }
+
+    button:hover {
+      background: #4338ca;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Are you coming to campus?</h1>
+
+  <div class="buttons">
+    <button onclick="celebrate()">Yes</button>
+    <button onclick="celebrate()">Yes</button>
+    <button onclick="celebrate()">Yes</button>
+    <button onclick="celebrate()">Yes</button>
+  </div>
+
+  <script>
+    function celebrate() {
+      confetti({
+        particleCount: 200,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+      alert("Hurray! 🎉");
+    }
+  </script>
+
+</body>
+</html>
