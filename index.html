@@ -8,6 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
+    /* --- GLOBAL FIX --- */
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -19,6 +25,7 @@
       position: fixed;
       top: 0;
       width: 100%;
+      box-sizing: border-box;
       z-index: 10;
       background: rgba(255,255,255,0.9);
       backdrop-filter: blur(8px);
@@ -45,12 +52,13 @@
       min-height: 100vh;
       padding-top: 100px;
       max-width: 1400px;
-      margin: auto;
+      margin: 0 auto;
+      box-sizing: border-box;
     }
 
     .hero-image {
       width: 45%;
-      padding: 60px 40px 60px 80px;
+      padding: 60px 40px 60px 60px;
       box-sizing: border-box;
     }
 
@@ -60,11 +68,12 @@
       object-fit: cover;
       border-radius: 18px;
       box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+      display: block;
     }
 
     .hero-content {
       width: 55%;
-      padding: 120px 80px 80px 40px;
+      padding: 120px 60px 80px 40px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
@@ -114,6 +123,7 @@
       background: #f9fbff;
     }
 
+    /* --- RESPONSIVE --- */
     @media (max-width: 1000px) {
       .hero {
         flex-direction: column;
@@ -122,7 +132,7 @@
       .hero-image,
       .hero-content {
         width: 100%;
-        padding: 40px 30px;
+        padding: 40px 24px;
       }
 
       .hero-image img {
@@ -130,7 +140,7 @@
       }
 
       .hero-content {
-        padding-top: 20px;
+        padding-top: 10px;
       }
     }
   </style>
@@ -150,7 +160,7 @@
 <section class="hero">
 
   <div class="hero-image">
-    <img src="picture1.jpg" alt="Rameshwar Mishra">
+    <img src="picture1.png" alt="Rameshwar Mishra">
   </div>
 
   <div class="hero-content">
@@ -178,7 +188,6 @@
       at Adobe Research.
       
     </p>
-
     <div class="links">
       <a href="mailto:rameshwarm@iiitd.ac.in">Email</a>
       <a href="https://github.com/rameshwar17180">GitHub</a>
