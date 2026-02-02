@@ -12,7 +12,7 @@
       margin: 0;
       font-family: 'Inter', sans-serif;
       color: #1f2937;
-      background: linear-gradient(135deg, #eef4ff, #f8fbff);
+      background: linear-gradient(135deg, #eef4ff, #f9fbff);
     }
 
     nav {
@@ -20,7 +20,7 @@
       top: 0;
       width: 100%;
       z-index: 10;
-      background: rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.9);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid #e5e7eb;
       padding: 16px 32px;
@@ -43,22 +43,29 @@
     .hero {
       display: flex;
       min-height: 100vh;
-      padding-top: 80px;
+      padding-top: 100px;
+      max-width: 1400px;
+      margin: auto;
     }
 
     .hero-image {
-      width: 50%;
+      width: 45%;
+      padding: 60px 40px 60px 80px;
+      box-sizing: border-box;
     }
 
     .hero-image img {
       width: 100%;
-      height: calc(100vh - 80px);
+      max-height: 75vh;
       object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.15);
     }
 
     .hero-content {
-      width: 50%;
-      padding: 100px 80px;
+      width: 55%;
+      padding: 120px 80px 80px 40px;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -67,14 +74,25 @@
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
 
     .subtitle {
       color: #475569;
-      font-size: 1.1rem;
-      line-height: 1.7;
+      font-size: 1.05rem;
+      line-height: 1.8;
       margin-bottom: 30px;
+      max-width: 620px;
+    }
+
+    .subtitle a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .subtitle a:hover {
+      text-decoration: underline;
     }
 
     .links a {
@@ -93,21 +111,26 @@
       padding: 30px;
       font-size: 0.9rem;
       color: #64748b;
-      background: #f8fbff;
+      background: #f9fbff;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
       .hero {
         flex-direction: column;
       }
-      .hero-image, .hero-content {
-        width: 100%;
-      }
-      .hero-image img {
-        height: 60vh;
-      }
+
+      .hero-image,
       .hero-content {
-        padding: 50px 30px;
+        width: 100%;
+        padding: 40px 30px;
+      }
+
+      .hero-image img {
+        max-height: 60vh;
+      }
+
+      .hero-content {
+        padding-top: 20px;
       }
     }
   </style>
@@ -125,18 +148,35 @@
 </nav>
 
 <section class="hero">
+
   <div class="hero-image">
-    <img src="picture1.png" alt="Rameshwar Mishra">
+    <img src="picture1.jpg" alt="Rameshwar Mishra">
   </div>
 
   <div class="hero-content">
     <h1>Rameshwar Mishra</h1>
+
     <p class="subtitle">
-      PhD Student, IIIT Delhi<br>
-      Computer Vision · Generative Models<br><br>
-      I work on controllable content synthesis using scene-graph
-      conditioned diffusion models, with interests in localized guidance in generative vision
-      and representation learning.
+      I am a PhD student at IIIT Delhi,
+      Advised by
+      <a href="https://www.iiitd.ac.in/subramanyam" target="_blank">Prof. A. V. Subramanyam</a>
+      as part of the
+      <a href="https://vcg.iiitd.edu.in/" target="_blank">Visual Conception Group</a>.
+      My research interests lie in controllable content synthesis, scene-graph conditioned diffusion models,
+      and generative visual understanding.
+      <br><br>
+      I have previously worked with
+      <a href="https://zheng-lab-anu.github.io/" target="_blank">Dr. Liang Zheng</a> at
+      the School of Computing in Australian National University,
+      and collaborated with
+      <a href="https://bishshoy.com/" target="_blank">Dr. Bishshoy Das</a>,
+      <a href="https://sites.google.com/site/wwwgmsu/" target="_blank">Dr. Guan-Ming Su</a>
+      at
+      Dolby Laboratories,
+      and
+      <a href="https://research.adobe.com/person/srikrishna-karanam/" target="_blank">Dr. Srikrishna Karanam</a>
+      at Adobe Research.
+      
     </p>
 
     <div class="links">
@@ -145,6 +185,7 @@
       <a href="https://linkedin.com/in/rameshwar-mishra-b53057148/">LinkedIn</a>
     </div>
   </div>
+
 </section>
 
 <footer>
